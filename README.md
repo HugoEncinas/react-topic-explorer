@@ -2,7 +2,30 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
+
+React web application that displays all the "[topics](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#topic)" related to the term "react", using the GitHub GraphQL API.
+
+The application displays how many "[stargazers](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#stargazerconnection)" each topic has. A click on a topic should display the topics related to that topic, and how many stargazers they have. And so forth.
+
+## Installation
+
+- yarn install
+- Add REACT_APP_GITHUB_API_TOKEN to a .env file with the following scopes:
+
+```
+  user
+  public_repo
+  repo
+  repo_deployment
+  repo:status
+  read:repo_hook
+  read:org
+  read:public_key
+  read:gpg_key
+```
+
+## How to run app & test
 
 In the project directory, you can run:
 
@@ -38,6 +61,18 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Dev Notes
+
+- React v. 17.0+, bootstrapped with create react app
+- React router v. 5.0+
+- Using Apollo for the GraphQL Github API
+
+### Future Improvements
+
+- Migrate to Typescript
+- Add unit testing
+- Add an UI library to style the components
 
 ## Learn More
 
